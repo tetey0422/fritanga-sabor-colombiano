@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ═══════════════════════════════════════════
+       SEO PRIMARIO
+  ═══════════════════════════════════════════ -->
+  <title>Fritanga Sabor Colombiano | Comida Colombiana en Indianapolis</title>
+  <meta name="description" content="Auténtica comida colombiana en Indianapolis. Arepas, fritanga, bandeja paisa, picadas, patacones y más. Pedidos por WhatsApp. Servicio de miércoles a domingo." />
+  <meta name="keywords" content="comida colombiana Indianapolis, fritanga Indianapolis, arepas Indianapolis, bandeja paisa Indianapolis, comida latina Indianapolis, restaurante colombiano Indianapolis, fritanga sabor colombiano, Colombian food Indianapolis, arepa Indianapolis, empanadas Indianapolis" />
+  <meta name="author" content="Fritanga Sabor Colombiano" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://fritanga-sabor-colombiano.vercel.app/" />
+
+  <!-- ═══════════════════════════════════════════
+       GEO TAGS (Indianapolis)
+  ═══════════════════════════════════════════ -->
+  <meta name="geo.region" content="US-IN" />
+  <meta name="geo.placename" content="Indianapolis, Indiana" />
+  <meta name="geo.position" content="39.7684;-86.1581" />
+  <meta name="ICBM" content="39.7684, -86.1581" />
+
+  <!-- ═══════════════════════════════════════════
+       OPEN GRAPH (WhatsApp / Facebook / redes)
+  ═══════════════════════════════════════════ -->
+  <meta property="og:type" content="restaurant" />
+  <meta property="og:title" content="Fritanga Sabor Colombiano | Indianapolis" />
+  <meta property="og:description" content="Auténtica fritanga y comida colombiana en Indianapolis. Arepas, bandeja paisa, picadas y más. ¡Haz tu pedido por WhatsApp!" />
+  <meta property="og:url" content="https://fritanga-sabor-colombiano.vercel.app/" />
+  <meta property="og:image" content="https://fritanga-sabor-colombiano.vercel.app/og-image.jpg" />
+  <meta property="og:locale" content="es_US" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:site_name" content="Fritanga Sabor Colombiano" />
+
+  <!-- ═══════════════════════════════════════════
+       TWITTER CARD
+  ═══════════════════════════════════════════ -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Fritanga Sabor Colombiano | Indianapolis" />
+  <meta name="twitter:description" content="Auténtica comida colombiana en Indianapolis. Pedidos por WhatsApp." />
+  <meta name="twitter:image" content="https://fritanga-sabor-colombiano.vercel.app/og-image.jpg" />
+
+  <!-- ═══════════════════════════════════════════
+       SCHEMA.ORG (JSON-LD) — muy importante para Google
+  ═══════════════════════════════════════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Fritanga Sabor Colombiano",
+    "description": "Auténtica comida colombiana en Indianapolis. Arepas, fritanga, bandeja paisa, picadas, patacones y más. Pedidos por WhatsApp.",
+    "url": "https://fritanga-sabor-colombiano.vercel.app",
+    "telephone": "+13174469148",
+    "servesCuisine": ["Colombian", "Latin American"],
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Indianapolis",
+      "addressRegion": "IN",
+      "addressCountry": "US"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Indianapolis"
+    },
+    "hasMenu": "https://fritanga-sabor-colombiano.vercel.app/#menu",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+13174469148",
+      "contactType": "orders",
+      "availableLanguage": ["Spanish", "English"]
+    },
+    "sameAs": [
+      "https://wa.me/13174469148"
+    ]
+  }
+  </script>
+
+  <!-- ═══════════════════════════════════════════
+       FONTS
+  ═══════════════════════════════════════════ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ═══ RESET & BASE ═══ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --gold:    #D4A017;
+      --gold-lt: #F0C040;
+      --red:     #C0392B;
+      --dark:    #111008;
+      --dark2:   #1A1710;
+      --dark3:   #242018;
+      --cream:   #F5EDD6;
+      --text:    #E8DCC8;
+      --muted:   #9A8F78;
+      --green-wa:#25D366;
+      --radius:  12px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--dark);
+      color: var(--text);
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ═══ NOISE TEXTURE OVERLAY ═══ */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.6;
+    }
+
+    /* ═══ HERO ═══ */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem 1.5rem 4rem;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 30%, rgba(212,160,23,0.12) 0%, transparent 70%),
+        radial-gradient(ellipse 50% 40% at 20% 80%, rgba(192,57,43,0.10) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 50% at 80% 70%, rgba(212,160,23,0.07) 0%, transparent 60%);
+      z-index: 0;
+    }
+
+    /* Colombian flag stripe */
+    .hero-stripe {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 5px;
+      background: linear-gradient(90deg, #FDD116 33.3%, #003087 33.3% 66.6%, #CE1126 66.6%);
+      z-index: 2;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(212,160,23,0.15);
+      border: 1px solid rgba(212,160,23,0.4);
+      color: var(--gold-lt);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 0.4rem 1rem;
+      border-radius: 100px;
+      margin-bottom: 1.5rem;
+      animation: fadeUp 0.8s ease both;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.8rem, 8vw, 5.5rem);
+      font-weight: 900;
+      line-height: 1.0;
+      color: var(--cream);
+      letter-spacing: -0.02em;
+      animation: fadeUp 0.9s 0.1s ease both;
+    }
+
+    .hero h1 span {
+      color: var(--gold);
+      display: block;
+    }
+
+    .hero-sub {
+      margin-top: 1.2rem;
+      font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+      color: var(--muted);
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      animation: fadeUp 1s 0.2s ease both;
+    }
+
+    .hero-days {
+      margin-top: 0.6rem;
+      font-size: 0.85rem;
+      color: var(--gold);
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      animation: fadeUp 1s 0.3s ease both;
+    }
+
+    .hero-cta {
+      margin-top: 2.5rem;
+      animation: fadeUp 1s 0.4s ease both;
+    }
+
+    .btn-wa {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: var(--green-wa);
+      color: #fff;
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      padding: 0.9rem 2rem;
+      border-radius: 100px;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 24px rgba(37,211,102,0.3);
+    }
+
+    .btn-wa:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(37,211,102,0.5);
+    }
+
+    .btn-wa svg { width: 22px; height: 22px; fill: #fff; flex-shrink: 0; }
+
+    .scroll-hint {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.4rem;
+      color: var(--muted);
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      animation: fadeUp 1s 0.8s ease both;
+      z-index: 1;
+    }
+
+    .scroll-hint::after {
+      content: '';
+      display: block;
+      width: 1px;
+      height: 36px;
+      background: linear-gradient(to bottom, var(--gold), transparent);
+      animation: scrollLine 1.8s ease-in-out infinite;
+    }
+
+    @keyframes scrollLine {
+      0%, 100% { opacity: 0.3; transform: scaleY(0.6); }
+      50% { opacity: 1; transform: scaleY(1); }
+    }
+
+    /* ═══ MENU SECTION ═══ */
+    #menu {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 5rem 1.5rem 6rem;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .section-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.8rem;
+    }
+
+    .section-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 700;
+      color: var(--cream);
+      line-height: 1.1;
+    }
+
+    .section-divider {
+      width: 60px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin: 1.2rem auto 0;
+    }
+
+    /* ═══ CATEGORY ═══ */
+    .category { margin-bottom: 3rem; }
+
+    .category-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--gold-lt);
+      letter-spacing: 0.05em;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid rgba(212,160,23,0.2);
+      margin-bottom: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .category-title::before {
+      content: '';
+      display: block;
+      width: 4px;
+      height: 1.1em;
+      background: var(--gold);
+      border-radius: 2px;
+    }
+
+    /* ═══ MENU ITEMS GRID ═══ */
+    .items-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+    }
+
+    @media (min-width: 600px) {
+      .items-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    .item-card {
+      background: var(--dark2);
+      border: 1px solid rgba(212,160,23,0.1);
+      border-radius: var(--radius);
+      padding: 1rem 1.2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .item-card:hover {
+      border-color: rgba(212,160,23,0.35);
+      background: var(--dark3);
+    }
+
+    .item-info { flex: 1; }
+
+    .item-name {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--cream);
+      margin-bottom: 0.25rem;
+    }
+
+    .item-desc {
+      font-size: 0.78rem;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+
+    .item-price {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--gold);
+      white-space: nowrap;
+      padding-top: 0.1rem;
+    }
+
+    /* ═══ WEEKEND TAG ═══ */
+    .tag-weekend {
+      display: inline-block;
+      background: rgba(192,57,43,0.2);
+      border: 1px solid rgba(192,57,43,0.4);
+      color: #E8837A;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      margin-left: 0.4rem;
+      vertical-align: middle;
+    }
+
+    /* ═══ STICKY WHATSAPP CTA ═══ */
+    .sticky-wa {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 100;
+      animation: popIn 0.5s 1.5s ease both;
+    }
+
+    .sticky-wa a {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--green-wa);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.88rem;
+      padding: 0.75rem 1.2rem 0.75rem 0.9rem;
+      border-radius: 100px;
+      box-shadow: 0 6px 28px rgba(37,211,102,0.45);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .sticky-wa a:hover {
+      transform: translateY(-2px) scale(1.03);
+      box-shadow: 0 10px 36px rgba(37,211,102,0.6);
+    }
+
+    .sticky-wa svg { width: 20px; height: 20px; fill: #fff; }
+
+    /* ═══ FOOTER ═══ */
+    footer {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 2rem 1rem 3rem;
+      border-top: 1px solid rgba(212,160,23,0.1);
+    }
+
+    footer p {
+      font-size: 0.8rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    footer strong { color: var(--gold); }
+
+    .footer-flag {
+      display: flex;
+      justify-content: center;
+      gap: 0;
+      margin-bottom: 1rem;
+    }
+
+    .footer-flag span {
+      display: block;
+      height: 4px;
+      width: 24px;
+    }
+
+    /* ═══ ANIMATIONS ═══ */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes popIn {
+      from { opacity: 0; transform: scale(0.7); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+
+    /* ═══ RESPONSIVE TWEAKS ═══ */
+    @media (max-width: 480px) {
+      .sticky-wa a span { display: none; }
+      .sticky-wa a { padding: 0.85rem; border-radius: 50%; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- STICKY WHATSAPP -->
+  <div class="sticky-wa" aria-label="Ordenar por WhatsApp">
+    <a href="https://wa.me/13174469148?text=Hola!%20Quiero%20hacer%20un%20pedido%20%F0%9F%8D%BD%EF%B8%8F" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+      <span>Ordenar ahora</span>
+    </a>
+  </div>
+
+  <!-- ══════════════════════════════════
+       HERO
+  ══════════════════════════════════ -->
+  <header class="hero" role="banner">
+    <div class="hero-stripe" aria-hidden="true"></div>
+    <div class="hero-content">
+      <div class="badge">🇨🇴 Indianapolis, Indiana</div>
+      <h1>
+        Fritanga
+        <span>Sabor Colombiano</span>
+      </h1>
+      <p class="hero-sub">Auténtica cocina colombiana hecha con amor,<br>directamente a tu mesa.</p>
+      <p class="hero-days">Miércoles a Domingo &nbsp;·&nbsp; Pedidos por WhatsApp</p>
+      <div class="hero-cta">
+        <a class="btn-wa"
+           href="https://wa.me/13174469148?text=Hola!%20Quiero%20hacer%20un%20pedido%20%F0%9F%8D%BD%EF%B8%8F"
+           target="_blank" rel="noopener"
+           aria-label="Hacer pedido por WhatsApp">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          Hacer Pedido por WhatsApp
+        </a>
+      </div>
+    </div>
+    <div class="scroll-hint" aria-hidden="true">Ver menú</div>
+  </header>
+
+  <!-- ══════════════════════════════════
+       MENÚ
+  ══════════════════════════════════ -->
+  <main id="menu" role="main">
+    <div class="section-header">
+      <p class="section-label">Lo mejor de Colombia</p>
+      <h2>Nuestro Menú</h2>
+      <div class="section-divider" aria-hidden="true"></div>
+    </div>
+
+    <!-- PLATOS FUERTES -->
+    <section class="category" aria-labelledby="cat-fuertes">
+      <h3 class="category-title" id="cat-fuertes">Platos Fuertes</h3>
+      <div class="items-grid">
+
+        <article class="item-card">
+          <div class="item-info">
+            <p class="item-name">Pechuga a la Plancha</p>
+            <p class="item-desc">Pechuga 500 gr · Papas fritas · Arroz · Ensalada · Soda</p>
+          </div>
+          <p class="item-price">$20</p>
+        </article>
+
+        <article class="item-card">
+          <div class="item-info">
+            <p class="item-name">Costillitas al Barril</p>
+            <p class="item-desc">Costillitas 600 gr · Patacones · Arroz · Ensalada · Soda</p>
+          </div>
+          <p class="item-price">$20</p>
+        </article>
+
+        <article class="item-card">
+          <div class="item-info">
+            <p class="item-name">Asada</p>
+            <p class="item-desc">Lomo de res 350 gr · Frijoles · Arroz · Madurito · Arepa · Ensalada</p>
+          </div>
+          <p class="item-price">$20</p>
+        </article>
+
+        <article class="item-card">
+          <div class="item-info">
+            <p class="item-name">Arroz Campesino</p>
+            <p class="item-desc">Res, cerdo, pollo, chorizo, chicharrón, maicitos, arveja</p>
+          </div>
+          <p class="item-price">$20</p>
+        </article>
+
+        <article class="item-card">
+          <div class="item-info">
+            <p class="item-name">Bandeja Paisa</p>
+            <p class="item-desc">Chicharrón · Chorizo · Huevo · Carne molida · Frijoles · Arroz · Arepa</p>
+          </div>
+          <p class="item-price">$25</p>
+        </article>
+
+        <article class="item-card">
+          <div class="item-info">
+            <p class="item-name">Churrasco</p>
+            <p class="item-desc">Papas fritas · Arepa · Ensalada</p>
+          </div>
+          <p class="item-price">$25</p>
+        </article>
+
+        <article class="item-card">
+          <div class="item-info">
+            <p class="item-name">Hamburguesa</p>
+            <p class="item-desc">Carne · Pollo · Tocineta · Jamón · Queso · Cebolla acaramelizada</p>
+          </div>
+          <p class="item-price">$18</p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- FRITANGA & PARRILLA -->
+    <section class="category" aria-labelledby="cat-fritanga">
+      <h3 class="category-title" id="cat-fritanga">Fritanga & Parrilla</h3>
+      <div class="items-grid">
+
+        <article class="item-card">
+          <div class="item-info">
+            <p class="item-name">Fritanga / Picada</p>
+            <p class="item-desc">Fritanga colombiana · Costilla de cerdo · Rellena o morcilla · Más sorpresas</p>
+          </div>
+          <p class="item-price">$25</p>
+        </article>
+
+        <article class="item-card">
+          <div class="item-info">
+            <p class="item-name">Picadita</p>
+            <p class="item-desc">Chicharrón · Chorizo · Morcilla · Arepa · Patacones</p>
+          </div>
+          <p class="item-price">$18</p>
+        </article>
+
+        <article class="item-card">
+          <div class="item-info">
+            <p class="item-name">Parrillada</p>
+            <p class="item-desc">300 gr churrasco · Morcilla · Chorizo · Chicharrón · Costilla</p>
+          </div>
+          <p class="item-price">$35</p>
+        </article>
+
+        <article class="item-card">
+          <div class="item-info">
+            <p class="item-name">Chicharrón con Patacones y Arepa</p>
+            <p class="item-desc">Chicharrón crocante · Patacones · Arepa</p>
+          </div>
+          <p class="item-price">$18</p>
+        </article>
+
+        <article class="item-card">
+          <div class="item-info">
+            <p class="item-name">Chorizo con Arepa</p>
+            <p class="item-desc">Chorizo colombiano · Arepa</p>
+          </div>
+          <p class="item-price">$14</p>
+        </article>
+
+        <article class="item-card">
+          <div class="item-info">
+            <p class="item-name">Morcilla con Papa Criolla</p>
+            <p class="item-desc">Morcilla colombiana · Papa criolla</p>
+          </div>
+          <p class="item-price">$12</p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- AREPAS -->
+    <section class="category" aria-labelledby="cat-arepas">
+      <h3 class="category-title" id="cat-arepas">Arepas</h3>
+      <div class="items-grid">
+
+        <article class="item-card">
+          <div class="item-info">
+            <p class="item-name">Arepa de Pollo</p>
+            <p class="item-desc">Pollo · Soda incluida</p>
+          </div>
+          <p class="item-price">$12</p>
+        </article>
+
+        <article class="item-card">
+          <div class="item-info">
+            <p class="item-name">Arepa Rellena</p>
+            <p class="item-desc">Carne mixta (carne/pollo) · Soda incluida</p>
+          </div>
+          <p class="item-price">$12</p>
+        </article>
+
+        <article class="item-card">
+          <div class="item-info">
+            <p class="item-name">Arepa Marranita</p>
+            <p class="item-desc">Chicharrón · Queso · Madurito frito · Soda incluida</p>
+          </div>
+          <p class="item-price">$13</p>
+        </article>
+
+        <article class="item-card">
+          <div class="item-info">
+            <p class="item-name">Arepa Criolla</p>
+            <p class="item-desc">Carne · Maíz · Queso · Madurito frito · Soda incluida</p>
+          </div>
+          <p class="item-price">$13</p>
+        </article>
+
+        <article class="item-card">
+          <div class="item-info">
+            <p class="item-name">Arepa Paisa</p>
+            <p class="item-desc">Carne · Pollo · Queso · Chicharrón · Soda incluida</p>
+          </div>
+          <p class="item-price">$14</p>
+        </article>
+
+        <article class="item-card">
+          <div class="item-info">
+            <p class="item-name">Arepa de Huevo</p>
+            <p class="item-desc">3 unidades</p>
+          </div>
+          <p class="item-price">$10</p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- SNACKS & PASABOCAS -->
+    <section class="category" aria-labelledby="cat-snacks">
+      <h3 class="category-title" id="cat-snacks">Snacks & Pasabocas</h3>
+      <div class="items-grid">
+
+        <article class="item-card">
+          <div class="item-info">
+            <p class="item-name">Flautas</p>
+            <p class="item-desc">4 unidades · Campesinas (maíz, madurito, carne desmechada)</p>
+          </div>
+          <p class="item-price">$15</p>
+        </article>
+
+        <article class="item-card">
+          <div class="item-info">
+            <p class="item-name">Pastel de Pollo</p>
+            <p class="item-desc">4 unidades · Especial (pollo, jamón, queso crema) Ranchero</p>
+          </div>
+          <p class="item-price">$15</p>
+        </article>
+
+        <article class="item-card">
+          <div class="item-info">
+            <p class="item-name">Empanadas</p>
+            <p class="item-desc">Orden 6 unidades · Carne, pollo o queso</p>
+          </div>
+          <p class="item-price">$15</p>
+        </article>
+
+        <article class="item-card">
+          <div class="item-info">
+            <p class="item-name">Papa Rellena</p>
+            <p class="item-desc">Carne · Arroz · Huevo</p>
+          </div>
+          <p class="item-price">$5</p>
+        </article>
+
+        <article class="item-card">
+          <div class="item-info">
+            <p class="item-name">Papas Locas</p>
+            <p class="item-desc">Papa francesa · Papa criolla · Carne · Chicharrón · Pollo</p>
+          </div>
+          <p class="item-price">$18</p>
+        </article>
+
+        <article class="item-card">
+          <div class="item-info">
+            <p class="item-name">Patacón Relleno</p>
+            <p class="item-desc">Patacón/Tostón · Carne de res · Pollo · Cabano · Queso</p>
+          </div>
+          <p class="item-price">$18</p>
+        </article>
+
+        <article class="item-card">
+          <div class="item-info">
+            <p class="item-name">Tamal Tolimense <span class="tag-weekend">Fin de semana</span></p>
+            <p class="item-desc">Tamal tolimense tradicional</p>
+          </div>
+          <p class="item-price">$12</p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- BEBIDAS -->
+    <section class="category" aria-labelledby="cat-bebidas">
+      <h3 class="category-title" id="cat-bebidas">Bebidas</h3>
+      <div class="items-grid">
+        <article class="item-card">
+          <div class="item-info">
+            <p class="item-name">Gaseosas</p>
+            <p class="item-desc">Variedad de refrescos</p>
+          </div>
+          <p class="item-price">$3</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <div style="text-align:center; margin-top: 3.5rem;">
+      <p style="color:var(--muted); font-size:0.9rem; margin-bottom:1.2rem;">
+        ¿Listo para ordenar? Escríbenos y con gusto te atendemos 🇨🇴
+      </p>
+      <a class="btn-wa"
+         href="https://wa.me/13174469148?text=Hola!%20Quiero%20hacer%20un%20pedido%20%F0%9F%8D%BD%EF%B8%8F"
+         target="_blank" rel="noopener"
+         aria-label="Ordenar por WhatsApp">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        Ordenar por WhatsApp
+      </a>
+    </div>
+  </main>
+
+  <!-- ══════════════════════════════════
+       FOOTER
+  ══════════════════════════════════ -->
+  <footer role="contentinfo">
+    <div class="footer-flag" aria-label="Bandera de Colombia" aria-hidden="true">
+      <span style="background:#FDD116;"></span>
+      <span style="background:#FDD116;"></span>
+      <span style="background:#003087;"></span>
+      <span style="background:#CE1126;"></span>
+    </div>
+    <p>
+      <strong>Fritanga Sabor Colombiano</strong><br>
+      Comida colombiana auténtica · Indianapolis, Indiana<br>
+      Miércoles a Domingo · Pedidos: <strong>(317) 446-9148</strong>
+    </p>
+    <p style="margin-top:0.8rem; font-size:0.72rem;">
+      © 2026 Fritanga Sabor Colombiano · Indianapolis, IN, USA
+    </p>
+  </footer>
+
+</body>
+</html>

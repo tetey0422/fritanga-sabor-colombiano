@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fritanga-sabor-colombiano.vercel.app/sitemap.xml
